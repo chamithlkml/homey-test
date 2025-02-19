@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
-cd /app && RAILS_ENV=$RAILS_ENV bundle exec rails db:migrate
-tail -f /dev/null
+cd /app && bundle exec rails db:migrate
+cd /app && bin/rails s -b '0.0.0.0'
