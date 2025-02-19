@@ -10,9 +10,11 @@ RUN npm install -g @vue/cli
 RUN apt-get install -y nginx
 RUN mkdir /app
 WORKDIR /app
+
+COPY Gemfile Gemfile.lock /app/
+RUN bundle install
+
 COPY . .
-# RUN cd /app && bundle install
-# RUN cd /app && npm install
 
 COPY start-app /usr/local/bin/start-app
 RUN chmod +x /usr/local/bin/start-app
