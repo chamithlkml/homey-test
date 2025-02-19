@@ -28,7 +28,7 @@
 - Install Docker desktop
 
 ```
-git checkout git@github.com:chamithlkml/homey-test.git
+git clone git@github.com:chamithlkml/homey-test.git
 cd homey-test
 mv .sample-env .env
 docker compose build

@@ -6,7 +6,7 @@ class Project < ApplicationRecord
 
   has_many :project_conversations_histories
 
-  enum status: { created: 0, ongoing: 1, blocked: 2, completed: 3 }
+  enum :status, [:created, :ongoing, :blocked, :completed]
 
   after_create :create_project_conversations_history
 

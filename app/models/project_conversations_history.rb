@@ -2,7 +2,7 @@ class ProjectConversationsHistory < ApplicationRecord
   belongs_to :project
   belongs_to :user
 
-  enum action: { commented: 0, changed_status: 1 }
+  enum :action, [:commented, :changed_status]
 
   validate :comment_presence_if_action_is_commented
   validate :status_presence_if_action_is_changed_status
